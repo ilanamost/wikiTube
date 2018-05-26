@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiTube</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="init()">
+    <header>
+        <h1>WikiTube</h1>
+    </header>
+
+    <main>
+        <div class="grid-container">
+            <div class="search-list">
+                <div class="list">
+                    <ul></ul>
+                </div>
+            </div>
+
+            <div class="video-container">
+                <div class="display">
+                    <form class="search" onsubmit="searchItem(event)">
+                        <input type="search" class="serach-input" autofocus></input>
+                        <button class="custom-button" type="submit">Search</button>
+                    </form>
+                    <div class="player">
+                        <iframe></iframe>
+                    </div>
+                    <div class="info">
+                        <h1></h1>
+                        <div class="info-for-title"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="popup" hidden>
+            <button class="custom-button close" onclick="closePopup()">x</button>
+            <h1>Choose other theme color:</h1>
+            <input class="custom-input" type="color"></input>
+            <button class="custom-button" onclick="doChange()">OK</button>
+            <button class="custom-button" onclick="doCancel()">Cancel</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="search-history">
+            <div class="searched-words"></div>
+            <div class="buttons-container">
+                <button class="custom-button button-in-container" onclick="deleteAllSwal()">Clear History</button>
+                <button class="custom-button button-in-container" onclick="changeThemeCustomPopup()">Change Theme</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/popups.js"></script>
+    <script src="js/youtube.js"></script>
+    <script src="js/wikipedia.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
